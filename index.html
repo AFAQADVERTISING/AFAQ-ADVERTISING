@@ -19,6 +19,7 @@
   --text:#2a1f1a;
 }
 *{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden;max-width:100vw}
 body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
 
 /* TICKER */
@@ -98,12 +99,12 @@ header{background:var(--white);border-bottom:3px solid var(--maroon);position:st
 /* OVERLAY & CART */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s}
 .overlay.open{opacity:1;pointer-events:all}
-.cart-drawer{position:fixed;top:0;left:0;width:min(400px,100vw);height:100vh;background:white;z-index:2001;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:4px 0 40px rgba(0,0,0,.2)}
+.cart-drawer{position:fixed;top:0;left:0;width:min(400px,100vw);height:100vh;background:white;z-index:2001;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:4px 0 40px rgba(0,0,0,.2);overflow:hidden}
 .cart-drawer.open{transform:translateX(0)}
 .cart-hdr{background:var(--maroon);color:white;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
 .cart-hdr h3{font-size:17px;font-weight:700}
 .btn-close{background:rgba(255,255,255,.15);border:none;color:white;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
-.cart-items{flex:1;overflow-y:auto;padding:16px}
+.cart-items{flex:1;overflow-y:auto;padding:16px;min-height:0}
 .cempty{text-align:center;padding:60px 20px;color:var(--gray-400)}
 .cempty-icon{font-size:64px;margin-bottom:16px}
 .citem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--gray-200);align-items:flex-start}
@@ -117,7 +118,7 @@ header{background:var(--white);border-bottom:3px solid var(--maroon);position:st
 .qval{font-size:14px;font-weight:700;min-width:20px;text-align:center}
 .crmv{background:none;border:none;color:#ccc;cursor:pointer;font-size:18px;padding:4px;transition:color .15s}
 .crmv:hover{color:#e53e3e}
-.cart-ftr{padding:16px 20px;border-top:2px solid var(--gray-200);background:var(--gray-100)}
+.cart-ftr{padding:16px 20px 24px;border-top:2px solid var(--gray-200);background:var(--gray-100);overflow-y:auto;flex-shrink:0;max-height:55vh}
 .ctotal{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .ctotal span{font-size:15px;font-weight:600}
 .ctotal strong{font-size:22px;font-weight:900;color:var(--maroon);font-family:'Cairo',sans-serif}
@@ -170,8 +171,27 @@ footer{background:var(--maroon-dark);color:rgba(255,255,255,.8);padding:40px 16p
 .flink{display:block;font-size:13px;opacity:.75;margin-bottom:8px;text-decoration:none;color:inherit;transition:opacity .15s}
 .flink:hover{opacity:1;color:var(--gold-pale)}
 .fbot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;opacity:.6}
-.wa-float{position:fixed;bottom:24px;left:24px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:999;transition:transform .2s;text-decoration:none}
-.wa-float:hover{transform:scale(1.1)}
+/* HEADER ICONS */
+.hdr-icons{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.hicon{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;cursor:pointer;padding:6px 8px;border-radius:10px;text-decoration:none;color:var(--text);transition:background .15s;font-size:18px}
+.hicon:hover{background:var(--gray-100)}
+.hicon-lbl{font-size:9px;color:var(--gray-400);font-family:'Tajawal',sans-serif;font-weight:600}
+
+/* BOTTOM NAV */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;height:62px;background:white;border-top:2px solid var(--gray-200);display:flex;align-items:center;justify-content:space-around;z-index:998;box-shadow:0 -4px 20px rgba(0,0,0,.08)}
+.bnav-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--gray-400);font-family:'Tajawal',sans-serif;background:none;border:none;cursor:pointer;padding:6px 12px;border-radius:12px;transition:all .2s;position:relative;min-width:52px}
+.bnav-item.active,.bnav-item:hover{color:var(--maroon)}
+.bnav-item.active .bnav-icon{transform:scale(1.15)}
+.bnav-icon{font-size:20px;line-height:1}
+.bnav-lbl{font-size:10px;font-weight:600}
+.bnav-cart{background:var(--maroon)!important;color:white!important;border-radius:16px;padding:8px 16px;margin-bottom:8px;box-shadow:0 4px 16px rgba(123,28,28,.35)}
+.bnav-cart .bnav-lbl{color:white}
+.bnav-badge{position:absolute;top:2px;right:6px;background:var(--gold);color:white;border-radius:50%;width:17px;height:17px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* ADJUST FOR BOTTOM NAV */
+footer{margin-bottom:62px}
+.toast{bottom:80px}
+body{padding-bottom:62px}
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--maroon);color:white;padding:10px 24px;border-radius:50px;font-size:14px;font-weight:600;z-index:9999;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
@@ -219,8 +239,22 @@ footer{background:var(--maroon-dark);color:rgba(255,255,255,.8);padding:40px 16p
       <input type="text" id="searchInput" placeholder="ابحث عن منتج أو خدمة...">
     </div>
     <button class="btn-cart" onclick="toggleCart()">
-      🛒 السلة <span class="cc" id="cartCount">0</span>
+      🛒 <span class="cc" id="cartCount">0</span>
     </button>
+    <div class="hdr-icons">
+      <button class="hicon" onclick="toggleWishlist()" title="المفضلة" id="wishBtn">
+        <span id="wishIcon">🤍</span>
+        <span class="hicon-lbl">المفضلة</span>
+      </button>
+      <a class="hicon" href="https://wa.me/966502996177" target="_blank" title="تواصل">
+        <span>📞</span>
+        <span class="hicon-lbl">تواصل</span>
+      </a>
+      <a class="hicon" href="https://www.afaqadver.com" target="_blank" title="موقعنا">
+        <span>🌐</span>
+        <span class="hicon-lbl">موقعنا</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -296,7 +330,31 @@ footer{background:var(--maroon-dark);color:rgba(255,255,255,.8);padding:40px 16p
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/966502996177?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%B1%D9%88%D8%A7%D8%A6%D8%B9%20%D8%A2%D9%81%D8%A7%D9%82" target="_blank">💬</a>
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav" id="bottomNav">
+  <a class="bnav-item active" href="#" onclick="scrollTop()" id="bn-home">
+    <span class="bnav-icon">🏠</span>
+    <span class="bnav-lbl">الرئيسية</span>
+  </a>
+  <a class="bnav-item" href="#catsGrid" onclick="scrollCats()">
+    <span class="bnav-icon">🗂️</span>
+    <span class="bnav-lbl">التصنيفات</span>
+  </a>
+  <button class="bnav-item bnav-cart" onclick="toggleCart()">
+    <span class="bnav-icon">🛒</span>
+    <span class="bnav-badge" id="bnCartCount" style="display:none">0</span>
+    <span class="bnav-lbl">السلة</span>
+  </button>
+  <a class="bnav-item" href="https://wa.me/966502996177" target="_blank">
+    <span class="bnav-icon">💬</span>
+    <span class="bnav-lbl">تواصل</span>
+  </a>
+  <a class="bnav-item" href="https://www.afaqadver.com" target="_blank">
+    <span class="bnav-icon">🌐</span>
+    <span class="bnav-lbl">موقعنا</span>
+  </a>
+</nav>
+
 <div class="overlay" id="overlay" onclick="closeAll()"></div>
 
 <!-- CART -->
@@ -519,6 +577,10 @@ function chQty(id,d){
 function updCart(){
   const cnt=cart.reduce((s,i)=>s+i.qty,0);
   document.getElementById('cartCount').textContent=cnt;
+  // bottom nav badge
+  const bb=document.getElementById('bnCartCount');
+  if(cnt>0){bb.style.display='flex';bb.textContent=cnt;}
+  else{bb.style.display='none';}
   const tot=cart.reduce((s,i)=>s+i.price*i.qty,0);
   document.getElementById('ctotal').textContent=tot.toLocaleString()+' ريال';
   document.getElementById('cartFtr').style.display=cart.length?'block':'none';
@@ -629,6 +691,27 @@ function showToast(msg){
 // ════════════════════════════════════════
 // INIT
 // ════════════════════════════════════════
+// ════════════════════════════════════════
+// BOTTOM NAV
+// ════════════════════════════════════════
+function scrollTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.bnav-item').forEach(b=>b.classList.remove('active'));
+  document.getElementById('bn-home').classList.add('active');
+}
+function scrollCats(){
+  document.getElementById('catsGrid').scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('.bnav-item').forEach(b=>b.classList.remove('active'));
+}
+
+// ════════════════════════════════════════
+// WISHLIST (بسيط)
+// ════════════════════════════════════════
+let wishlist=[];
+function toggleWishlist(){
+  showToast('💛 قريباً — ميزة المفضلة');
+}
+
 document.getElementById('searchInput').addEventListener('input',()=>{curPage=1;renderProds();});
 renderCats(); renderProds(); updCart();
 </script>
