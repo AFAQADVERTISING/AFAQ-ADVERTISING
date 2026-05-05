@@ -1,1 +1,545 @@
-# AFAQ
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>روائع آفاق للدعاية والإعلان | أبو عريش — جازان</title>
+<meta name="description" content="مؤسسة روائع آفاق للدعاية والإعلان — أبو عريش، جازان. تصميم، طباعة، لافتات، هويات بصرية، فعاليات. تواصل: 0502996177">
+<meta property="og:title" content="روائع آفاق للدعاية والإعلان">
+<meta property="og:description" content="كل خدمات الدعاية والإعلان تحت سقف واحد — أبو عريش، جازان">
+<meta property="og:url" content="https://www.afaqadver.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --maroon:#7B1C1C; --maroon-dark:#5a1212; --maroon-light:#9e2525;
+  --gold:#C8860A; --gold-light:#e8a020; --gold-pale:#f5d78a;
+  --cream:#fdf8f0; --white:#ffffff;
+  --gray-100:#f9f6f1; --gray-200:#ede8e0; --gray-400:#9e9080; --gray-700:#4a3f35;
+  --text:#2a1f1a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+
+/* TICKER */
+.ticker{background:var(--maroon);color:var(--gold-pale);font-size:13px;font-weight:500;overflow:hidden;height:34px;display:flex;align-items:center}
+.ticker-inner{display:flex;gap:60px;animation:tickMove 35s linear infinite;white-space:nowrap}
+@keyframes tickMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ti::after{content:'✦';color:var(--gold);margin-right:60px}
+
+/* HEADER */
+header{background:var(--white);border-bottom:3px solid var(--maroon);position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(123,28,28,.12)}
+.hinner{max-width:1200px;margin:0 auto;padding:0 16px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-icon{width:42px;height:42px;background:var(--maroon);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px;font-weight:900;font-family:'Cairo',sans-serif}
+.logo-ar{font-size:14px;font-weight:700;color:var(--maroon);line-height:1.2}
+.logo-en{font-size:9px;color:var(--gold);letter-spacing:1px;font-weight:500}
+.search-bar{flex:1;max-width:480px;position:relative}
+.search-bar input{width:100%;padding:9px 16px 9px 44px;border:2px solid var(--gray-200);border-radius:50px;font-family:'Tajawal',sans-serif;font-size:14px;background:var(--gray-100);outline:none;transition:all .2s}
+.search-bar input:focus{border-color:var(--maroon);background:white}
+.si{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-400);font-size:17px}
+.btn-cart{background:var(--maroon);color:white;border:none;border-radius:50px;padding:8px 16px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .2s}
+.btn-cart:hover{background:var(--maroon-dark)}
+.cc{background:var(--gold);color:white;border-radius:50%;width:18px;height:18px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--maroon-dark),var(--maroon) 50%,#9e2525);padding:52px 16px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-block;background:rgba(200,134,10,.2);border:1px solid var(--gold);color:var(--gold-pale);padding:4px 16px;border-radius:50px;font-size:12px;font-weight:600;margin-bottom:16px;letter-spacing:1px}
+.hero h1{font-family:'Cairo',sans-serif;font-size:clamp(26px,6vw,48px);font-weight:900;color:white;line-height:1.2;margin-bottom:8px}
+.hero h1 span{color:var(--gold)}
+.hero p{color:rgba(255,255,255,.75);font-size:15px;max-width:420px;margin:0 auto 24px}
+.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.stat{text-align:center;color:white}
+.stat-num{font-size:22px;font-weight:900;color:var(--gold);font-family:'Cairo',sans-serif}
+.stat-lbl{font-size:11px;opacity:.7}
+
+/* SECTION */
+.section{max-width:1200px;margin:0 auto;padding:32px 16px}
+.sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.sec-title{font-family:'Cairo',sans-serif;font-size:20px;font-weight:800;color:var(--maroon);position:relative;padding-right:14px}
+.sec-title::before{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:4px;height:22px;background:var(--gold);border-radius:2px}
+
+/* CATS */
+.cats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.cat-card{background:white;border:2px solid var(--gray-200);border-radius:14px;padding:18px 12px;text-align:center;cursor:pointer;transition:all .25s;color:var(--text)}
+.cat-card:hover,.cat-card.active{border-color:var(--maroon);background:var(--maroon);color:white;transform:translateY(-3px);box-shadow:0 8px 24px rgba(123,28,28,.2)}
+.cat-icon{font-size:28px;margin-bottom:8px}
+.cat-name{font-size:13px;font-weight:700}
+.cat-count{font-size:11px;opacity:.6;margin-top:2px}
+
+/* FILTERS */
+.fbar{background:white;border:1px solid var(--gray-200);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.flbl{font-size:13px;font-weight:600;color:var(--gray-700)}
+.fsel{border:1.5px solid var(--gray-200);border-radius:8px;padding:6px 12px;font-family:'Tajawal',sans-serif;font-size:13px;color:var(--text);background:var(--gray-100);cursor:pointer;outline:none}
+.rcount{margin-right:auto;font-size:13px;color:var(--gray-400)}
+
+/* PRODUCTS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+.pc{background:white;border-radius:14px;overflow:hidden;border:1.5px solid var(--gray-200);transition:all .25s;cursor:pointer;position:relative}
+.pc:hover{border-color:var(--maroon);transform:translateY(-4px);box-shadow:0 12px 32px rgba(123,28,28,.15)}
+.pimg{width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--gray-100),var(--gray-200));display:flex;align-items:center;justify-content:center;font-size:52px;color:var(--gray-400)}
+.pbadge{position:absolute;top:10px;right:10px;background:var(--gold);color:white;font-size:10px;font-weight:700;padding:3px 8px;border-radius:50px}
+.pbody{padding:12px}
+.pcat{font-size:10px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.pname{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pdesc{font-size:11px;color:var(--gray-400);margin-bottom:10px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pfooter{display:flex;align-items:center;justify-content:space-between}
+.pprice{font-size:16px;font-weight:900;color:var(--maroon);font-family:'Cairo',sans-serif}
+.pprice span{font-size:11px;font-weight:500;color:var(--gray-400)}
+.btn-add{background:var(--maroon);color:white;border:none;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.btn-add:hover{background:var(--gold);transform:scale(1.1)}
+
+/* LOAD MORE */
+.lmw{text-align:center;padding:32px 0}
+.btn-lm{background:transparent;border:2px solid var(--maroon);color:var(--maroon);padding:12px 40px;border-radius:50px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s}
+.btn-lm:hover{background:var(--maroon);color:white}
+
+/* OVERLAY & CART */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.open{opacity:1;pointer-events:all}
+.cart-drawer{position:fixed;top:0;left:0;width:min(400px,100vw);height:100vh;background:white;z-index:2001;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:4px 0 40px rgba(0,0,0,.2)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-hdr{background:var(--maroon);color:white;padding:18px 20px;display:flex;align-items:center;justify-content:space-between}
+.cart-hdr h3{font-size:17px;font-weight:700}
+.btn-close{background:rgba(255,255,255,.15);border:none;color:white;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.cart-items{flex:1;overflow-y:auto;padding:16px}
+.cempty{text-align:center;padding:60px 20px;color:var(--gray-400)}
+.cempty-icon{font-size:64px;margin-bottom:16px}
+.citem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--gray-200);align-items:flex-start}
+.citem-icon{width:52px;height:52px;background:var(--gray-100);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.cinfo{flex:1}
+.cname{font-size:13px;font-weight:700;margin-bottom:3px}
+.cprice{font-size:14px;font-weight:900;color:var(--maroon)}
+.cqty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qbtn{width:24px;height:24px;border:1.5px solid var(--gray-200);background:white;border-radius:50%;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.qbtn:hover{border-color:var(--maroon);color:var(--maroon)}
+.qval{font-size:14px;font-weight:700;min-width:20px;text-align:center}
+.crmv{background:none;border:none;color:#ccc;cursor:pointer;font-size:18px;padding:4px;transition:color .15s}
+.crmv:hover{color:#e53e3e}
+.cart-ftr{padding:16px 20px;border-top:2px solid var(--gray-200);background:var(--gray-100)}
+.ctotal{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.ctotal span{font-size:15px;font-weight:600}
+.ctotal strong{font-size:22px;font-weight:900;color:var(--maroon);font-family:'Cairo',sans-serif}
+.btn-wa{width:100%;background:#25D366;color:white;border:none;padding:14px;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s;margin-bottom:8px}
+.btn-wa:hover{background:#128C7E}
+.btn-wa2{width:100%;background:transparent;border:2px solid #25D366;color:#25D366;padding:10px;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
+.btn-wa2:hover{background:#25D366;color:white}
+
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal.open{opacity:1;pointer-events:all}
+.mbg{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.mbox{background:white;border-radius:20px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;position:relative;z-index:1;transform:scale(.92);transition:transform .25s}
+.modal.open .mbox{transform:scale(1)}
+.mimg{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--gray-100),var(--gray-200));display:flex;align-items:center;justify-content:center;font-size:80px;border-radius:20px 20px 0 0}
+.mbody{padding:20px}
+.mcat{font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:6px}
+.mname{font-size:20px;font-weight:900;font-family:'Cairo',sans-serif;margin-bottom:8px}
+.mdesc{font-size:14px;color:var(--gray-700);line-height:1.7;margin-bottom:16px}
+.mprice{font-size:28px;font-weight:900;color:var(--maroon);font-family:'Cairo',sans-serif;margin-bottom:20px}
+.mclose{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.4);border:none;color:white;width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
+.btn-addlg{width:100%;background:var(--maroon);color:white;border:none;padding:14px;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s}
+.btn-addlg:hover{background:var(--maroon-dark)}
+
+/* FOOTER */
+footer{background:var(--maroon-dark);color:rgba(255,255,255,.8);padding:40px 16px 20px;margin-top:60px}
+.finner{max-width:1200px;margin:0 auto}
+.ftop{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:20px}
+.ftitle{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:12px}
+.flink{display:block;font-size:13px;opacity:.75;margin-bottom:8px;text-decoration:none;color:inherit;transition:opacity .15s}
+.flink:hover{opacity:1;color:var(--gold-pale)}
+.fbot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;opacity:.6}
+.wa-float{position:fixed;bottom:24px;left:24px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:999;transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.1)}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--maroon);color:white;padding:10px 24px;border-radius:50px;font-size:14px;font-weight:600;z-index:9999;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:600px){
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cats-grid{grid-template-columns:repeat(3,1fr)}
+  .logo-ar,.logo-en{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ti">🏙️ روائع آفاق للدعاية والإعلان</span>
+    <span class="ti">📍 أبو عريش، جازان</span>
+    <span class="ti">🖨️ طباعة احترافية بأعلى جودة</span>
+    <span class="ti">🎨 تصميم هويات بصرية متكاملة</span>
+    <span class="ti">📋 لافتات داخلية وخارجية</span>
+    <span class="ti">📱 إعلانات سوشيال ميديا</span>
+    <span class="ti">🏆 فعاليات ومؤتمرات</span>
+    <span class="ti">🏙️ روائع آفاق للدعاية والإعلان</span>
+    <span class="ti">📍 أبو عريش، جازان</span>
+    <span class="ti">🖨️ طباعة احترافية بأعلى جودة</span>
+    <span class="ti">🎨 تصميم هويات بصرية متكاملة</span>
+    <span class="ti">📋 لافتات داخلية وخارجية</span>
+    <span class="ti">📱 إعلانات سوشيال ميديا</span>
+    <span class="ti">🏆 فعاليات ومؤتمرات</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="hinner">
+    <a class="logo" href="#">
+      <div class="logo-icon">آ</div>
+      <div>
+        <div class="logo-ar">روائع آفاق</div>
+        <div class="logo-en">AFAQ ADVERTISING</div>
+      </div>
+    </a>
+    <div class="search-bar">
+      <span class="si">🔍</span>
+      <input type="text" id="searchInput" placeholder="ابحث عن منتج أو خدمة...">
+    </div>
+    <button class="btn-cart" onclick="toggleCart()">
+      🛒 السلة <span class="cc" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">✦ أبو عريش، جازان ✦</div>
+  <h1>كل خدمات الدعاية والإعلان<br><span>تحت سقف واحد</span></h1>
+  <p>تصميم • طباعة • لافتات • هويات بصرية • فعاليات</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">+300</div><div class="stat-lbl">منتج وخدمة</div></div>
+    <div class="stat"><div class="stat-num">+500</div><div class="stat-lbl">عميل سعيد</div></div>
+    <div class="stat"><div class="stat-num">8+</div><div class="stat-lbl">سنوات خبرة</div></div>
+  </div>
+</div>
+
+<!-- CATS -->
+<div class="section">
+  <div class="sec-hdr"><h2 class="sec-title">التصنيفات</h2></div>
+  <div class="cats-grid" id="catsGrid"></div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section">
+  <div class="sec-hdr">
+    <h2 class="sec-title" id="secTitle">جميع المنتجات</h2>
+  </div>
+  <div class="fbar">
+    <span class="flbl">ترتيب:</span>
+    <select class="fsel" id="sortSel" onchange="renderProds()">
+      <option value="">افتراضي</option>
+      <option value="pa">السعر: الأقل أولاً</option>
+      <option value="pd">السعر: الأعلى أولاً</option>
+      <option value="az">الاسم أ-ي</option>
+    </select>
+    <span class="rcount" id="rcount"></span>
+  </div>
+  <div class="pgrid" id="pgrid"></div>
+  <div class="lmw" id="lmw" style="display:none">
+    <button class="btn-lm" onclick="loadMore()">عرض المزيد ↓</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="finner">
+    <div class="ftop">
+      <div>
+        <div style="font-family:'Cairo',sans-serif;font-size:18px;font-weight:900;color:white">روائع آفاق</div>
+        <div style="font-size:10px;color:var(--gold);letter-spacing:1px;margin-bottom:10px">AFAQ ADVERTISING</div>
+        <p style="font-size:13px;opacity:.7;line-height:1.6">مؤسسة روائع آفاق للدعاية والإعلان<br>وتنظيم الفعاليات والمؤتمرات</p>
+      </div>
+      <div>
+        <div class="ftitle">روابط سريعة</div>
+        <a class="flink" href="#">الرئيسية</a>
+        <a class="flink" href="#">المنتجات</a>
+        <a class="flink" href="#">من نحن</a>
+        <a class="flink" href="#">تواصل معنا</a>
+      </div>
+      <div>
+        <div class="ftitle">تواصل معنا</div>
+        <a class="flink" href="https://wa.me/966502996177" target="_blank">📱 0502996177</a>
+        <a class="flink" href="tel:+966172344228">📞 0172344228</a>
+        <a class="flink" href="mailto:office@rwayaafaq.com">✉️ office@rwayaafaq.com</a>
+        <a class="flink" href="https://www.afaqadver.com" target="_blank">🌐 afaqadver.com</a>
+        <a class="flink" href="https://maps.app.goo.gl/JQZGByUE2mXDwsuk7" target="_blank">📍 أبو عريش، طريق الملك فهد</a>
+        <a class="flink" href="https://instagram.com/afaqadv2020" target="_blank">📸 @afaqadv2020</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 روائع آفاق للدعاية والإعلان — جميع الحقوق محفوظة | س.ت: 5901024564</span>
+      <span>🇸🇦 أبو عريش، جازان</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/966502996177?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%B1%D9%88%D8%A7%D8%A6%D8%B9%20%D8%A2%D9%81%D8%A7%D9%82" target="_blank">💬</a>
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+<!-- CART -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-hdr">
+    <h3>🛒 سلة التسوق</h3>
+    <button class="btn-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-ftr" id="cartFtr" style="display:none">
+    <div class="ctotal">
+      <span>الإجمالي:</span>
+      <strong id="ctotal">0 ريال</strong>
+    </div>
+    <button class="btn-wa" onclick="orderWA()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      طلب عبر واتساب
+    </button>
+    <button class="btn-wa2" onclick="askWA()">💬 استفسار عن الطلب</button>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="mbg" onclick="closeModal()"></div>
+  <div class="mbox">
+    <button class="mclose" onclick="closeModal()">✕</button>
+    <div class="mimg" id="mimg"></div>
+    <div class="mbody">
+      <div class="mcat" id="mcat"></div>
+      <div class="mname" id="mname"></div>
+      <div class="mdesc" id="mdesc"></div>
+      <div class="mprice" id="mprice"></div>
+      <button class="btn-addlg" onclick="addFromModal()">🛒 أضف إلى السلة</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════════════
+// DATA
+// ════════════════════════════════════════
+const CATS = [
+  {id:'all',name:'الكل',icon:'🏪'},
+  {id:'هويات بصرية',name:'هويات بصرية',icon:'🎨'},
+  {id:'طباعة',name:'طباعة',icon:'🖨️'},
+  {id:'لافتات',name:'لافتات',icon:'📋'},
+  {id:'مطبوعات',name:'مطبوعات',icon:'📰'},
+  {id:'سوشيال ميديا',name:'سوشيال ميديا',icon:'📱'},
+  {id:'فعاليات',name:'فعاليات',icon:'🎪'},
+  {id:'هدايا دعائية',name:'هدايا دعائية',icon:'🎁'},
+];
+
+const PRODS = [
+  {id:1,name:'تصميم شعار احترافي',cat:'هويات بصرية',icon:'🎨',price:299,desc:'تصميم شعار احترافي بصيغ متعددة مع دليل الهوية البصرية',badge:'الأكثر طلباً'},
+  {id:2,name:'هوية بصرية متكاملة',cat:'هويات بصرية',icon:'🎭',price:899,desc:'شعار + بطاقة أعمال + ورق رسمي + ظرف + ختم + دليل الهوية',badge:'مميز'},
+  {id:3,name:'تصميم بطاقة أعمال',cat:'هويات بصرية',icon:'💼',price:99,desc:'تصميم بطاقة أعمال بوجهين بتصميم احترافي'},
+  {id:4,name:'تصميم ورق رسمي',cat:'هويات بصرية',icon:'📄',price:149,desc:'تصميم ورق رسمي للمراسلات والعروض التجارية'},
+  {id:5,name:'تصميم ختم مؤسسة',cat:'هويات بصرية',icon:'🔏',price:79,desc:'تصميم ختم رسمي للمؤسسة بتصميم احترافي'},
+  {id:6,name:'تصميم ملف تعريفي',cat:'هويات بصرية',icon:'📁',price:499,desc:'تصميم ملف تعريفي كامل للمؤسسة بتصميم إبداعي'},
+  {id:7,name:'طباعة بطاقات أعمال 1000',cat:'طباعة',icon:'🖨️',price:120,desc:'طباعة 1000 بطاقة أعمال على ورق فاخر مع الكوتنج',badge:'عرض'},
+  {id:8,name:'طباعة بروشور A4 × 500',cat:'طباعة',icon:'📰',price:180,desc:'طباعة 500 بروشور A4 ثلاثي الطي بألوان نابضة'},
+  {id:9,name:'طباعة بوستر A3',cat:'طباعة',icon:'🖼️',price:85,desc:'طباعة بوستر A3 عالي الجودة'},
+  {id:10,name:'طباعة مجلة مؤسسة 20 صفحة',cat:'طباعة',icon:'📖',price:650,desc:'طباعة مجلة مؤسسة 20 صفحة بورق صقيل فاخر'},
+  {id:11,name:'طباعة فاتورة/سند × 200',cat:'طباعة',icon:'🧾',price:95,desc:'طباعة 200 فاتورة بنسختين بتصميم احترافي'},
+  {id:12,name:'طباعة منيو مطعم × 50',cat:'طباعة',icon:'🍽️',price:220,desc:'طباعة 50 منيو مطعم مع التغليف الفاخر'},
+  {id:13,name:'لافتة سنبلة خارجية',cat:'لافتات',icon:'📋',price:350,desc:'لافتة سنبلة خارجية بإضاءة LED مع التركيب 100×60 سم',badge:'شامل التركيب'},
+  {id:14,name:'لافتة حائطية داخلية',cat:'لافتات',icon:'🏷️',price:180,desc:'لافتة حائطية للمكاتب والمحلات بأحجام متعددة'},
+  {id:15,name:'لوحة إعلانية LED خارجية',cat:'لافتات',icon:'💡',price:750,desc:'لوحة إعلانية بإضاءة LED خارجية طول 2 متر'},
+  {id:16,name:'ستاند X-Banner',cat:'لافتات',icon:'🗺️',price:280,desc:'ستاند إعلاني X-Banner بالتصميم والطباعة'},
+  {id:17,name:'راية علم إعلاني',cat:'لافتات',icon:'🚩',price:190,desc:'راية علم للفعاليات والمناسبات بالتصميم والطباعة'},
+  {id:18,name:'لافتة استقبال فاخرة',cat:'لافتات',icon:'🎪',price:420,desc:'لافتة استقبال خشبية فاخرة مع الحرف المجسم'},
+  {id:19,name:'تصميم إعلان صحيفة',cat:'مطبوعات',icon:'📲',price:199,desc:'تصميم إعلان صحيفة جاهز للنشر بجميع الأحجام'},
+  {id:20,name:'ملصقات ستيكر × 100',cat:'مطبوعات',icon:'🏷️',price:75,desc:'طباعة 100 ملصق ستيكر مقاس 10×5 سم'},
+  {id:21,name:'طباعة ظرف رسمي × 200',cat:'مطبوعات',icon:'✉️',price:89,desc:'طباعة 200 ظرف رسمي بحجم A5'},
+  {id:22,name:'طباعة مظاريف A4 × 100',cat:'مطبوعات',icon:'📬',price:130,desc:'طباعة 100 مظروف A4 بالشعار والبيانات الرسمية'},
+  {id:23,name:'دعوة حفل فاخرة × 100',cat:'مطبوعات',icon:'🎉',price:155,desc:'تصميم وطباعة 100 دعوة حفل فاخرة مع مظروف'},
+  {id:24,name:'كتيب خدمات 12 صفحة',cat:'مطبوعات',icon:'📑',price:380,desc:'تصميم وطباعة 100 كتيب خدمات 12 صفحة'},
+  {id:25,name:'تصميم 10 منشورات سوشيال',cat:'سوشيال ميديا',icon:'📱',price:349,desc:'تصميم 10 منشورات احترافية لمنصات التواصل الاجتماعي',badge:'شهري'},
+  {id:26,name:'إدارة حساب انستغرام',cat:'سوشيال ميديا',icon:'📸',price:799,desc:'إدارة حساب انستغرام شهرياً مع التصميم والنشر'},
+  {id:27,name:'إدارة حساب تويتر/X',cat:'سوشيال ميديا',icon:'🐦',price:599,desc:'إدارة حساب تويتر شهرياً مع التصميم والنشر'},
+  {id:28,name:'تصميم كوفر وبروفايل',cat:'سوشيال ميديا',icon:'🖼️',price:149,desc:'تصميم صورة بروفايل وغلاف لجميع المنصات'},
+  {id:29,name:'تصميم 5 قوالب ريلز',cat:'سوشيال ميديا',icon:'🎬',price:250,desc:'تصميم 5 قوالب ريلز وستوري متحركة'},
+  {id:30,name:'حملة إعلانية ممولة — شهر',cat:'سوشيال ميديا',icon:'🚀',price:1200,desc:'إدارة حملة إعلانية ممولة لمدة شهر مع التقرير'},
+  {id:31,name:'تنظيم حفل تخرج',cat:'فعاليات',icon:'🎓',price:3500,desc:'تنظيم حفل تخرج شامل الديكور والطباعة والضيافة',badge:'شامل'},
+  {id:32,name:'تنظيم معرض تجاري',cat:'فعاليات',icon:'🏢',price:5000,desc:'تنظيم معرض تجاري متكامل مع التصميم والتنفيذ'},
+  {id:33,name:'تنظيم مؤتمر أو ملتقى',cat:'فعاليات',icon:'🎤',price:8000,desc:'تنظيم مؤتمر أو ملتقى مع كافة الخدمات اللوجستية'},
+  {id:34,name:'خيمة وديكور فعالية',cat:'فعاليات',icon:'⛺',price:1800,desc:'خيمة فعالية مع ديكور وإضاءة كاملة'},
+  {id:35,name:'تأجير شاشة LED كبيرة',cat:'فعاليات',icon:'📺',price:950,desc:'تأجير شاشة LED كبيرة مع تشغيل المحتوى'},
+  {id:36,name:'طباعة مستلزمات فعالية',cat:'فعاليات',icon:'🎪',price:680,desc:'طباعة رايات ولافتات وبنرات الفعالية كاملة'},
+  {id:37,name:'تيشرت مطبوع (للقطعة)',cat:'هدايا دعائية',icon:'👕',price:45,desc:'تيشرت مطبوع بشعار المؤسسة — الحد الأدنى 10 قطع',badge:'الحد الأدنى 10'},
+  {id:38,name:'كوب سيراميك مطبوع',cat:'هدايا دعائية',icon:'☕',price:35,desc:'كوب سيراميك مطبوع بشعار المؤسسة — للقطعة'},
+  {id:39,name:'أقلام دعائية مطبوعة',cat:'هدايا دعائية',icon:'🖊️',price:8,desc:'أقلام دعائية مطبوعة بشعار المؤسسة — للقطعة'},
+  {id:40,name:'مفاتيح دعائية مطبوعة',cat:'هدايا دعائية',icon:'🔑',price:12,desc:'مفاتيح دعائية مطبوعة بشعار المؤسسة — للقطعة'},
+  {id:41,name:'حقيبة قماش مطبوعة',cat:'هدايا دعائية',icon:'👜',price:25,desc:'حقيبة قماش مطبوعة بالشعار — للقطعة'},
+  {id:42,name:'لوحة خشبية هدية فاخرة',cat:'هدايا دعائية',icon:'🎁',price:120,desc:'لوحة خشبية فاخرة مطبوعة أو محفورة للهدايا التذكارية'},
+];
+
+// ════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════
+let cart=[], curCat='all', curPage=1, curModal=null;
+const PAGE=12;
+
+// ════════════════════════════════════════
+// CATEGORIES
+// ════════════════════════════════════════
+function renderCats(){
+  document.getElementById('catsGrid').innerHTML=CATS.map(c=>{
+    const n=c.id==='all'?PRODS.length:PRODS.filter(p=>p.cat===c.id).length;
+    return `<div class="cat-card ${curCat===c.id?'active':''}" onclick="selCat('${c.id}')">
+      <div class="cat-icon">${c.icon}</div>
+      <div class="cat-name">${c.name}</div>
+      <div class="cat-count">${n} منتج</div>
+    </div>`;
+  }).join('');
+}
+function selCat(id){
+  curCat=id; curPage=1;
+  renderCats(); renderProds();
+  document.getElementById('secTitle').textContent=id==='all'?'جميع المنتجات':id;
+  document.querySelector('.section:last-of-type').scrollIntoView({behavior:'smooth'});
+}
+
+// ════════════════════════════════════════
+// PRODUCTS
+// ════════════════════════════════════════
+function getList(){
+  const q=document.getElementById('searchInput').value.toLowerCase();
+  let list=PRODS.filter(p=>(curCat==='all'||p.cat===curCat)&&(!q||p.name.includes(q)||p.cat.includes(q)||p.desc.includes(q)));
+  const s=document.getElementById('sortSel').value;
+  if(s==='pa') list.sort((a,b)=>a.price-b.price);
+  else if(s==='pd') list.sort((a,b)=>b.price-a.price);
+  else if(s==='az') list.sort((a,b)=>a.name.localeCompare(b.name,'ar'));
+  return list;
+}
+function renderProds(){
+  const list=getList();
+  const slice=list.slice(0,curPage*PAGE);
+  document.getElementById('rcount').textContent=list.length+' نتيجة';
+  document.getElementById('pgrid').innerHTML=slice.map(p=>`
+    <div class="pc" onclick="openModal(${p.id})">
+      ${p.badge?`<div class="pbadge">${p.badge}</div>`:''}
+      <div class="pimg">${p.icon}</div>
+      <div class="pbody">
+        <div class="pcat">${p.cat}</div>
+        <div class="pname">${p.name}</div>
+        <div class="pdesc">${p.desc}</div>
+        <div class="pfooter">
+          <div class="pprice">${p.price.toLocaleString()} <span>ريال</span></div>
+          <button class="btn-add" onclick="event.stopPropagation();addCart(${p.id})">+</button>
+        </div>
+      </div>
+    </div>`).join('');
+  document.getElementById('lmw').style.display=slice.length<list.length?'block':'none';
+}
+function loadMore(){curPage++;renderProds();}
+
+// ════════════════════════════════════════
+// MODAL
+// ════════════════════════════════════════
+function openModal(id){
+  const p=PRODS.find(x=>x.id===id); curModal=p;
+  document.getElementById('mimg').innerHTML=`<span style="font-size:80px">${p.icon}</span>`;
+  document.getElementById('mcat').textContent=p.cat;
+  document.getElementById('mname').textContent=p.name;
+  document.getElementById('mdesc').textContent=p.desc;
+  document.getElementById('mprice').textContent=p.price.toLocaleString()+' ريال';
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('overlay').classList.add('open');
+}
+function closeModal(){
+  document.getElementById('modal').classList.remove('open');
+  if(!document.getElementById('cartDrawer').classList.contains('open'))
+    document.getElementById('overlay').classList.remove('open');
+  curModal=null;
+}
+function addFromModal(){if(curModal){addCart(curModal.id);closeModal();}}
+
+// ════════════════════════════════════════
+// CART
+// ════════════════════════════════════════
+function addCart(id){
+  const p=PRODS.find(x=>x.id===id);
+  const e=cart.find(x=>x.id===id);
+  if(e) e.qty++; else cart.push({...p,qty:1});
+  updCart(); showToast('✓ تمت إضافة "'+p.name+'" للسلة');
+}
+function rmCart(id){cart=cart.filter(x=>x.id!==id);updCart();}
+function chQty(id,d){
+  const i=cart.find(x=>x.id===id);
+  if(!i)return; i.qty+=d;
+  if(i.qty<=0)cart=cart.filter(x=>x.id!==id);
+  updCart();
+}
+function updCart(){
+  const cnt=cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cartCount').textContent=cnt;
+  const tot=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  document.getElementById('ctotal').textContent=tot.toLocaleString()+' ريال';
+  document.getElementById('cartFtr').style.display=cart.length?'block':'none';
+  const el=document.getElementById('cartItems');
+  if(!cart.length){
+    el.innerHTML='<div class="cempty"><div class="cempty-icon">🛒</div><p>السلة فارغة</p><p style="font-size:13px;margin-top:8px;opacity:.6">أضف منتجات للبدء</p></div>';
+    return;
+  }
+  el.innerHTML=cart.map(i=>`
+    <div class="citem">
+      <div class="citem-icon">${i.icon}</div>
+      <div class="cinfo">
+        <div class="cname">${i.name}</div>
+        <div class="cprice">${(i.price*i.qty).toLocaleString()} ريال</div>
+        <div class="cqty">
+          <button class="qbtn" onclick="chQty(${i.id},-1)">−</button>
+          <span class="qval">${i.qty}</span>
+          <button class="qbtn" onclick="chQty(${i.id},1)">+</button>
+        </div>
+      </div>
+      <button class="crmv" onclick="rmCart(${i.id})">✕</button>
+    </div>`).join('');
+}
+function toggleCart(){
+  document.getElementById('cartDrawer').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+function closeAll(){
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+  closeModal();
+}
+
+// ════════════════════════════════════════
+// WHATSAPP
+// ════════════════════════════════════════
+function orderWA(){
+  if(!cart.length)return;
+  const tot=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  let m='🛒 *طلب جديد — روائع آفاق للدعاية والإعلان*\n\n';
+  cart.forEach(i=>{m+=`▸ ${i.name} × ${i.qty} = ${(i.price*i.qty).toLocaleString()} ريال\n`;});
+  m+=`\n💰 *الإجمالي: ${tot.toLocaleString()} ريال*`;
+  m+='\n\n📍 أبو عريش، جازان';
+  window.open('https://wa.me/966502996177?text='+encodeURIComponent(m),'_blank');
+}
+function askWA(){
+  window.open('https://wa.me/966502996177?text='+encodeURIComponent('السلام عليكم، أريد الاستفسار عن خدمات روائع آفاق للدعاية والإعلان'),'_blank');
+}
+
+// ════════════════════════════════════════
+// TOAST
+// ════════════════════════════════════════
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+// ════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════
+document.getElementById('searchInput').addEventListener('input',()=>{curPage=1;renderProds();});
+renderCats(); renderProds(); updCart();
+</script>
+</body>
+</html>
