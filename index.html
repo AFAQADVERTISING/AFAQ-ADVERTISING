@@ -757,7 +757,7 @@ function orderWA(){
   cart.forEach((i,idx)=>{m+=`${idx+1}. ${i.name}\n   ${i.qty} × ${i.price.toLocaleString()} = ${(i.price*i.qty).toLocaleString()} ريال\n`;});
   m+='━━━━━━━━━━━━━━━━━━\n';
   m+=`💰 *الإجمالي: ${tot.toLocaleString()} ريال*\n`;
-  if(note)m+=`\n📝 *ملاحظات:* ${note}\n`;
+  if(note)m+=`\n📝 *كيف نخدمك؟:* ${note}\n`;
   m+='\n⏰ '+new Date().toLocaleString('ar-SA');
   window.open('https://wa.me/966502996177?text='+encodeURIComponent(m),'_blank');
 }
